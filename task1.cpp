@@ -1,80 +1,81 @@
-// task1.cpp : This file contains the 'main' function. Program execution begins and ends there.
+п»ї// task1.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
 #include <iostream>
-
+#include <cstdlib>
 
 enum months
 {
-    Январь,
-    Февраль,
-    Март,
-    Апрель,
-    Май,
-    Июнь,
-    Июль,
-    Август,
-    Сентябрь,
-    Октябрь,
-    Ноябрь,
-    Декабрь
+    РЇРЅРІР°СЂСЊ = 1,
+    Р¤РµРІСЂР°Р»СЊ = 2,
+    РњР°СЂС‚ = 3, 
+    РђРїСЂРµР»СЊ = 4,
+    РњР°Р№ = 5,
+    РСЋРЅСЊ = 6,
+    РСЋР»СЊ = 7,
+    РђРІРіСѓСЃС‚ = 8,
+    РЎРµРЅС‚СЏР±СЂСЊ = 9,
+    РћРєС‚СЏР±СЂСЊ = 10,
+    РќРѕСЏР±СЂСЊ = 11,
+    Р”РµРєР°Р±СЂСЊ = 12
 };
 
 int main() {
 
-    setlocale(LC_ALL, "Russian");
+    setlocale(LC_ALL, "");
+    std::system("chcp 1251");
 
     months m;
     int mInt;
     
     do {
-        std::cout << "Введите номер месяца: ";
+        std::cout << "Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ РјРµСЃСЏС†Р°: ";
         std::cin >> mInt;
         m = static_cast<months>(mInt);
     
         if (m == 0) {
-            std::cout << "До свидания" << std::endl;;
+            std::cout << "Р”Рѕ СЃРІРёРґР°РЅРёСЏ" << std::endl;;
         }
         else if (m >= 13) {
-            std::cout << "Неправильный номер!" << std::endl;
+            std::cout << "РќРµРїСЂР°РІРёР»СЊРЅС‹Р№ РЅРѕРјРµСЂ!" << std::endl;
         }
         else {
             switch (m) {
-            case 1:
-                std::cout << "Январь" << std::endl;
+            case months::РЇРЅРІР°СЂСЊ:
+                std::cout << "РЇРЅРІР°СЂСЊ" << std::endl;
                 break;
-            case 2:
-                std::cout << "Февраль" << std::endl;
+            case months::Р¤РµРІСЂР°Р»СЊ:
+                std::cout << "Р¤РµРІСЂР°Р»СЊ" << std::endl;
                 break;
-            case 3:
-                std::cout << "Март" << std::endl;
+            case months::РњР°СЂС‚:
+                std::cout << "РњР°СЂС‚" << std::endl;
                 break;
-            case 4:
-                std::cout << "Апрель" << std::endl;
+            case months::РђРїСЂРµР»СЊ:
+                std::cout << "РђРїСЂРµР»СЊ" << std::endl;
                 break;
-            case 5:
-                std::cout << "Май" << std::endl;
+            case months::РњР°Р№:
+                std::cout << "РњР°Р№" << std::endl;
                 break;
-            case 6:
-                std::cout << "Июнь" << std::endl;
+            case months::РСЋРЅСЊ:
+                std::cout << "РСЋРЅСЊ" << std::endl;
                 break;
-            case 7:
-                std::cout << "Июль" << std::endl;
+            case months::РСЋР»СЊ:
+                std::cout << "РСЋР»СЊ" << std::endl;
                 break;
-            case 8:
-                std::cout << "Август" << std::endl;
+            case months::РђРІРіСѓСЃС‚:
+                std::cout << "РђРІРіСѓСЃС‚" << std::endl;
                 break;
-            case 9:
-                std::cout << "Сентябрь" << std::endl;
+            case months::РЎРµРЅС‚СЏР±СЂСЊ:
+                std::cout << "РЎРµРЅС‚СЏР±СЂСЊ" << std::endl;
                 break;
-            case 10:
-                std::cout << "Октябрь" << std::endl;
+            case months::РћРєС‚СЏР±СЂСЊ:
+                std::cout << "РћРєС‚СЏР±СЂСЊ" << std::endl;
                 break;
-            case 11:
-                std::cout << "Ноябрь" << std::endl;
+            case months::РќРѕСЏР±СЂСЊ:
+                std::cout << "РќРѕСЏР±СЂСЊ" << std::endl;
                 break;
-            case 12:
-                std::cout << "Декабрь" << std::endl;
+            case months::Р”РµРєР°Р±СЂСЊ:
+                std::cout << "Р”РµРєР°Р±СЂСЊ" << std::endl;
                 break;
             }
         }
